@@ -1,14 +1,94 @@
 <div class="container">
-  <mat-card>
-    <p>
-      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
-    </p>
-    <mat-card-content>
-      <mat-card-title translate>Hello world !</mat-card-title>
-      <mat-card-subtitle>
-        <app-loader [isLoading]="isLoading" size="1.5"></app-loader>
-        <q [hidden]="isLoading">{{quote}}</q>
-      </mat-card-subtitle>
-    </mat-card-content>
-  </mat-card>
+  <div class="row pb-3">
+    <div class="col-sm-12">
+      <mat-card>
+        <div class="intro-header">
+          <p>
+            <img class="intro-headshot" src="assets/headshot.jpg" alt="picture of Nate"/>
+          </p>
+          <mat-card-title translate>Nate Walls</mat-card-title>
+          <mat-card-subtitle>
+            Software Developer
+          </mat-card-subtitle>
+        </div>
+        <mat-card-content>
+          <p>
+            Hello, and thank you for visiting my resume website! I am a software
+            developer with experience in front-end, back-end, and full-stack
+            web development. You can find the source code for this static Angular
+            website TODO HERE.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row pb-3">
+    <div class="col-sm-12">
+      <mat-card >
+        <mat-card-title>Work History</mat-card-title>
+          <mat-card-content>
+            <mat-accordion>
+              <app-work-history-item companyName="Dick's Sporting Goods"
+                                     title="Software Engineer II"
+                                     dateRange="January 2020 - present"
+                                     description="This is the description">
+
+              </app-work-history-item>
+              <app-work-history-item companyName="Sila Solutions Group (Acquired by EY)"
+                                     title="Software Developer, Identity and Access Management"
+                                     dateRange="January 2019 - January 2020"
+                                     description="This is the description">
+
+              </app-work-history-item>
+              <app-work-history-item companyName="Hileman Group"
+                                     title="Technology Intern"
+                                     dateRange="x - x"
+                                     description="This is the description">
+
+              </app-work-history-item>
+              <app-work-history-item companyName="Innovative Systems, Inc."
+                                     title="Research and Development Intern"
+                                     dateRange="x - x"
+                                     description="This is the description">
+              </app-work-history-item>
+          </mat-accordion>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row pb-3">
+    <div class="col-sm-12">
+      <mat-card>
+        <mat-card-title>Education</mat-card-title>
+        <mat-card-content>
+          <p> TODO </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row pb-3">
+    <div class="col-sm-12">
+      <mat-card>
+        <mat-card-title>Skills</mat-card-title>
+        <mat-card-subtitle>(big = advanced, small = beginner)</mat-card-subtitle>
+        <mat-card-content>
+          <angular-tag-cloud [config]="cloudOptions" [data]="cloudData"></angular-tag-cloud>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row pb-3">
+    <div class="col-sm-12">
+      <mat-card>
+        <mat-card-title> Personal Life </mat-card-title>
+        <mat-card-content>
+          TODO
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>

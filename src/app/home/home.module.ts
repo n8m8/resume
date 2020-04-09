@@ -9,6 +9,8 @@ import { MaterialModule } from '@app/material.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { QuoteService } from './quote.service';
+import { WorkHistoryItemComponent } from './work-history-item/work-history-item.component';
+import { TagCloudModule } from 'angular-tag-cloud-module';
 
 @NgModule({
   imports: [
@@ -18,10 +20,12 @@ import { QuoteService } from './quote.service';
     SharedModule,
     FlexLayoutModule,
     MaterialModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    TagCloudModule
   ],
   declarations: [
-    HomeComponent
+    HomeComponent,
+    WorkHistoryItemComponent
   ]
 })
 export class HomeModule { }

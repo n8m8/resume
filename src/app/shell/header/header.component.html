@@ -6,16 +6,26 @@
     <span class="title">{{title}}</span>
   </div>
   <div fxHide.lt-md>
-    <a class="brand" href="https://github.com/ngx-rocket" translate>APP_NAME</a>
+    <!-- <a class="brand" href="https://github.com/ngx-rocket" translate>APP_NAME</a> -->
     <button mat-button routerLink="/home" routerLinkActive="active">
       <mat-icon>home</mat-icon>
       <span translate>Home</span>
     </button>
-    <button mat-button routerLink="/about" routerLinkActive="active">
-      <mat-icon>info</mat-icon>
-      <span translate>About</span>
-    </button>
+    <!-- <button mat-button> -->
+      <a mat-button href="https://github.com/n8m8">
+        <mat-icon>code</mat-icon>
+        <span translate>Source Code</span>
+      </a>
+    <!-- </button> -->
+    <!-- <button mat-button routerLink="/about" routerLinkActive="active">
+      <mat-icon>picture_as_pdf</mat-icon>
+      <span translate>Download Resume TODO </span>
+    </button> -->
+    <a mat-button href="https://github.com/n8m8">
+      <mat-icon>picture_as_pdf</mat-icon>
+      <span translate>Download Resume TODO</span>
+    </a>
   </div>
   <span fxFlex></span>
-  <app-language-selector icon="true"></app-language-selector>
+  <!-- <app-language-selector icon="true"></app-language-selector> -->
 </mat-toolbar>

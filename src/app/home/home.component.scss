@@ -1,11 +1,21 @@
-.container {
-  text-align: center;
-  padding: 1em;
+// .container {
+//   text-align: center;
+//   padding: 1em;
+// }
+
+.intro-background {
+  background: red;
 }
 
-.logo {
+.intro-headshot {
   width: 150px;
   margin: 0 auto;
+  border-radius: 50%;
+}
+
+.intro-header {
+  text-align: center;
+  background: red;
 }
 
 q {

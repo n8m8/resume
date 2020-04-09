@@ -8,11 +8,13 @@ import { MaterialModule } from './material.module';
 
 import { CoreModule } from '@core';
 import { SharedModule } from '@shared';
-import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { AboutModule } from './about/about.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './home/home.module'
+import { TagCloudModule } from 'angular-tag-cloud-module';
+
 
 @NgModule({
   imports: [
@@ -27,6 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
     ShellModule,
     HomeModule,
     AboutModule,
+    TagCloudModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
