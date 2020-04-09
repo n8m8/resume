@@ -1,18 +1,20 @@
 <div class="container">
-  <div class="row pb-3">
+  <div class="row pb-3 pt-3">
     <div class="col-sm-12">
-      <mat-card>
-        <div class="intro-header">
-          <p>
-            <img class="intro-headshot" src="assets/headshot.jpg" alt="picture of Nate"/>
-          </p>
-          <mat-card-title translate>Nate Walls</mat-card-title>
-          <mat-card-subtitle>
-            Software Developer
-          </mat-card-subtitle>
+      <mat-card class="pt-0">
+        <div class="intro-header row justify-content-sm-center">
+          <div class="col-sm-3 pt-3 intro-title">
+            <p style="max-width: 100%">
+              <img style="max-width: 100%" class="intro-headshot" src="assets/headshot.jpg" alt="picture of Nate"/>
+            </p>
+            <mat-card-title translate>Nate Walls</mat-card-title>
+            <mat-card-subtitle>
+              Software Developer
+            </mat-card-subtitle>
+          </div>
         </div>
         <mat-card-content>
-          <p>
+          <p class="m-2">
             Hello, and thank you for visiting my resume website! I am a software
             developer with experience in front-end, back-end, and full-stack
             web development. You can find the source code for this static Angular
@@ -35,7 +37,7 @@
                                      description="This is the description">
 
               </app-work-history-item>
-              <app-work-history-item companyName="Sila Solutions Group (Acquired by EY)"
+              <app-work-history-item companyName="Sila Solutions Group"
                                      title="Software Developer, Identity and Access Management"
                                      dateRange="January 2019 - January 2020"
                                      description="This is the description">
@@ -43,13 +45,23 @@
               </app-work-history-item>
               <app-work-history-item companyName="Hileman Group"
                                      title="Technology Intern"
-                                     dateRange="x - x"
+                                     dateRange="May - August 2018"
                                      description="This is the description">
 
               </app-work-history-item>
               <app-work-history-item companyName="Innovative Systems, Inc."
                                      title="Research and Development Intern"
-                                     dateRange="x - x"
+                                     dateRange="January - August 2017"
+                                     description="This is the description">
+              </app-work-history-item>
+              <app-work-history-item companyName="Intwine Connect"
+                                     title="Front End User Interface Intern"
+                                     dateRange="May - August 2016 (full time), August - December 2016 (part time)"
+                                     description="This is the description">
+              </app-work-history-item>
+              <app-work-history-item companyName="Miscellaneous"
+                                     title="TODO"
+                                     dateRange="May - August 2016 (full time), August - December 2016 (part time)"
                                      description="This is the description">
               </app-work-history-item>
           </mat-accordion>
@@ -69,7 +81,9 @@
     </div>
   </div>
 
-  <div class="row pb-3">
+  <div class="pb-3">
+    <!--
+    WORD CLOUD STUFF
     <div class="col-sm-12">
       <mat-card>
         <mat-card-title>Skills</mat-card-title>
@@ -78,7 +92,48 @@
           <angular-tag-cloud [config]="cloudOptions" [data]="cloudData"></angular-tag-cloud>
         </mat-card-content>
       </mat-card>
-    </div>
+    </div> -->
+    <mat-card class="container">
+      <mat-card-title>Skills</mat-card-title>
+      <div class="row">
+        <div class="col-md-4">
+          <mat-card>
+            <mat-card-title>Advanced</mat-card-title>
+            <mat-card-content>
+                <ul>
+                  <li *ngFor="let skill of advancedSkills">
+                    {{ skill }}
+                  </li>
+                </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-md-4">
+          <mat-card>
+            <mat-card-title>Intermediate</mat-card-title>
+            <mat-card-content>
+                <ul>
+                  <li *ngFor="let skill of interSkills">
+                    {{ skill }}
+                  </li>
+                </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-md-4">
+          <mat-card>
+            <mat-card-title>Beginner</mat-card-title>
+            <mat-card-content>
+              <ul>
+                <li *ngFor="let skill of introSkills">
+                  {{ skill }}
+                </li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </mat-card>
   </div>
 
   <div class="row pb-3">

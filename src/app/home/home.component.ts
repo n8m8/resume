@@ -187,6 +187,39 @@ export class HomeComponent implements OnInit {
     },
   ];
 
+  public advancedSkills = [
+    "Object Oriented Programming",
+    "Web Services / Web Frameworks",
+    "Java",
+    "SailPoint IdentityIQ"
+  ]
+
+  public interSkills = [
+    "SQL / Database Design",
+    "C#",
+    ".NET Core",
+    "Git / Version Control",
+    "Angular",
+    "Unity3D",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ]
+
+  public introSkills = [
+    "Python",
+    "Flask",
+    "Spring",
+    "MongoDB",
+    "Azure DevOps",
+    "PCF",
+    "Swift",
+    "AngularJS",
+    "Node.JS",
+    "ASP.NET",
+    "TypeScript"
+  ]
+
   constructor() { }
 
   ngOnInit() {

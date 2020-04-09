@@ -1,14 +1,15 @@
 <mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      {{ companyName }}
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title style="margin: auto;" class="align-middle">
+      <b>{{ companyName }}</b>
     </mat-panel-title>
-    <mat-panel-description class="float-right">
-      <div>
-        <span>{{ title }}</span> <span><i>{{ dateRange }}</i></span>
-      </div>
+    <mat-panel-description >
+        <div style="text-align: right; float: right;">{{ title }}</div>
     </mat-panel-description>
   </mat-expansion-panel-header>
+  <p>
+    <i>{{ dateRange }}</i>
+  </p>
   <p>
     {{ description }}
   </p>
