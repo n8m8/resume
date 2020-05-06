@@ -10,10 +10,14 @@ export class WorkHistoryItemComponent implements OnInit {
   @Input() title: string;
   @Input() dateRange: string;
   @Input() description: string;
+  @Input() isFirst: boolean;
+  @Input() bullet: string[];
+  @Input() logo: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.logo);
   }
 
 }

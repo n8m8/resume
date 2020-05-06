@@ -1,16 +1,30 @@
-<mat-expansion-panel>
+<mat-expansion-panel [expanded]="isFirst">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title style="margin: auto;" class="align-middle">
       <b>{{ companyName }}</b>
     </mat-panel-title>
-    <mat-panel-description >
-        <div style="text-align: right; float: right;">{{ title }}</div>
+    <mat-panel-description style="position: relative!important; display:block!important;" class="text-right">
+        {{ title }}
     </mat-panel-description>
   </mat-expansion-panel-header>
-  <p>
-    <i>{{ dateRange }}</i>
-  </p>
-  <p>
-    {{ description }}
-  </p>
+  <!-- <p> -->
+  <div class="row justify-content-md-center">
+    <div class="col-sm-8">
+      <p *ngIf="dateRange">
+        <i>{{ dateRange }}</i>
+      </p>
+      <p *ngIf="description">
+        {{ description }}
+      </p>
+      <ul>
+        <li *ngFor="let item of bullet">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4 justify-content-sm-center text-center">
+      <img style="max-width: 100%; max-height: 150px;" [src]="logo" />
+    </div>
+  </div>
+  <!-- </p> -->
 </mat-expansion-panel>

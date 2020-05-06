@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row pb-3 pt-3">
-    <div class="col-sm-12">
-      <mat-card class="pt-0">
+  <div class="row pb-3 pt-3 justify-content-sm-center">
+    <div class="col-sm-9">
+      <mat-card class="pt-0 pb-1">
         <div class="intro-header row justify-content-sm-center">
           <div class="col-sm-3 pt-3 intro-title">
             <p style="max-width: 100%">
@@ -9,78 +9,191 @@
             </p>
             <mat-card-title translate>Nate Walls</mat-card-title>
             <mat-card-subtitle>
-              Software Developer
+              <b>Software Developer</b>
             </mat-card-subtitle>
           </div>
         </div>
         <mat-card-content>
-          <p class="m-2">
-            Hello, and thank you for visiting my resume website! I am a software
-            developer with experience in front-end, back-end, and full-stack
-            web development. You can find the source code for this static Angular
-            website TODO HERE.
-          </p>
+          <div class="row justify-content-md-center">
+            <div class="row">
+              <!-- <p class="m-2 pt-1"> -->
+              <p style="padding-left: 4em; padding-right: 4em;" class="pt-3">
+                Hello, and thank you for visiting my resume website!
+
+                I am a software developer with experience in front-end, back-end,
+                and full-stack development in a diverse set of sectors including
+                cybersecurity consulting, data processing, retail, and marketing.
+
+                You can find the source code for this quick Angular
+                website
+                <a href="https://github.com/n8m8/resume">here</a>.
+                It was created thanks to the Rocket Boilerplate,
+                responsive Bootstrap, and Angular Material Design. You can find
+                some other old projects of mine on my
+                <a href="https://github.com/n8m8">GitHub</a>.
+              </p>
+            </div>
+            <div class="row pb-3 text-center">
+              <div class="col-md-3">
+                <!-- <button mat-button"> -->
+                  <a class="p-0" mat-button href="https://www.linkedin.com/in/nathan-walls-9b530ba8/">
+                  <!-- <mat-icon>home</mat-icon> -->
+
+                    <img class="p-3 contact-button" src="../../assets/linkedin.svg">
+                  </a>
+                <!-- </button> -->
+              </div>
+              <div class="col-md-3">
+                <!-- <button mat-button"> -->
+                  <a class="p-0" mat-button href="mailto:nfwalls@gmail.com">
+                  <!-- <mat-icon>home</mat-icon> -->
+
+                    <img style="max-width: 100% " class="p-3 contact-button" src="../../assets/email.png">
+                  </a>
+                <!-- </button> -->
+              </div>
+              <div class="col-md-3">
+                <a class="p-0" mat-button href="http://natewalls.com/resume.pdf">
+                <!-- <mat-icon>home</mat-icon> -->
+
+                  <img style="max-width: 100%" class="p-3 contact-button" src="../../assets/download-pdf.webp">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a class="p-0" mat-button href="https://github.com/n8m8">
+                <!-- <mat-icon>home</mat-icon> -->
+
+                  <img style="max-width: 100%" class="p-3 contact-button" src="../../assets/github.svg">
+                </a>
+              </div>
+            </div>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
   </div>
 
-  <div class="row pb-3">
-    <div class="col-sm-12">
-      <mat-card >
-        <mat-card-title>Work History</mat-card-title>
-          <mat-card-content>
+  <h1 class="text-center">Work History</h1>
+  <div class="row pb-3 justify-content-sm-center">
+    <div class="col-sm-9">
+      <!-- <mat-card > -->
+        <!-- <mat-card-title>Work History</mat-card-title> -->
+          <mat-card-content >
             <mat-accordion>
               <app-work-history-item companyName="Dick's Sporting Goods"
                                      title="Software Engineer II"
-                                     dateRange="January 2020 - present"
-                                     description="This is the description">
+                                     dateRange="January - April 2020 (Furlough) | Pittsburgh, PA"
+                                     isFirst="true"
+                                     logo="../../assets/dicks-sporting-goods-logo.png"
+                                     [bullet]="[
+                                       'Perform full stack web development to support DSG customer accounts and the DSG loyalty program',
+                                       'Create, update, and maintain RESTful microservices primarily with C#, .NET Core, and MSSQL Server',
+                                       'Implement front-end features with Angular and Typescript relying on both internal and external APIs',
+                                       'Continuously roll out builds and features via PCF and Azure DevOps / Pipelines with no downtime'
+                                     ]">
 
               </app-work-history-item>
               <app-work-history-item companyName="Sila Solutions Group"
                                      title="Software Developer, Identity and Access Management"
-                                     dateRange="January 2019 - January 2020"
-                                     description="This is the description">
+                                     dateRange="January 2019 - January 2020 | Arlington, VA"
+                                     description="Sila SG was acquired by EY in November 2019."
+                                     logo="../../assets/sila.jpg"
+                                     [bullet]="[
+                                     'Planned, developed, and delivered custom implementations of SailPoint IdentityIQ for federal clients',
+                                     'Created custom workflows with Java and Beanshell allowing client to request access to sensitive systems, and allowing administrators to easily add and remove requestable items',
+                                     'Helped teams work toward a more modern software development lifecycle with GitLab'
+                                     ]">
 
               </app-work-history-item>
               <app-work-history-item companyName="Hileman Group"
                                      title="Technology Intern"
-                                     dateRange="May - August 2018"
-                                     description="This is the description">
+                                     dateRange="May - August 2018 | Cleveland, OH"
+                                     logo="../../assets/hileman-logo.svg"
+                                     [bullet]="[
+                                     'Created and integrated custom web functionality for Kentico CMS with ASP.NET',
+                                     'Implemented Algolia’s search platform with its JavaScript libraries',
+                                     'Worked on intern team, supervised by mentors, to execute an intern-run client website redesign'
+                                     ]">
 
               </app-work-history-item>
               <app-work-history-item companyName="Innovative Systems, Inc."
                                      title="Research and Development Intern"
-                                     dateRange="January - August 2017"
-                                     description="This is the description">
+                                     dateRange="January - August 2017 | Pittsburgh, PA"
+                                     logo="../../assets/innovative.png"
+                                     [bullet]="[
+                                     'Developed back-end web services with .NET framework to support data management software',
+                                     'Used jQuery and related JavaScript libraries to develop front-end interface'
+                                     ]">
               </app-work-history-item>
               <app-work-history-item companyName="Intwine Connect"
                                      title="Front End User Interface Intern"
-                                     dateRange="May - August 2016 (full time), August - December 2016 (part time)"
-                                     description="This is the description">
+                                     dateRange="May - December 2016 (full & part time) | Cleveland, OH"
+                                     logo="../../assets/intwine.png"
+                                     [bullet]="[
+                                     'Developed front-end with AngularJS for users to remotely monitor/control internet routers',
+                                     'Added features to back-end with Spring MVC for Java and PostgreSQL'
+                                     ]">
               </app-work-history-item>
-              <app-work-history-item companyName="Miscellaneous"
-                                     title="TODO"
-                                     dateRange="May - August 2016 (full time), August - December 2016 (part time)"
-                                     description="This is the description">
-              </app-work-history-item>
+              <!-- <app-work-history-item companyName="Miscellaneous"
+                                     title=""
+                                     [bullet]="[
+                                     ''
+                                     ]">
+              </app-work-history-item> -->
           </mat-accordion>
         </mat-card-content>
-      </mat-card>
+      <!-- </mat-card> -->
     </div>
   </div>
 
-  <div class="row pb-3">
-    <div class="col-sm-12">
+  <h1 class="text-center">Education</h1>
+  <div class="row pb-3 justify-content-sm-center">
+    <div class="col-sm-9">
       <mat-card>
-        <mat-card-title>Education</mat-card-title>
+        <!-- <mat-card-title>Education</mat-card-title> -->
         <mat-card-content>
-          <p> TODO </p>
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+              <p>
+                <b>Case Western Reserve University</b> - <i>Cleveland, OH</i><br>
+                January 2019<br>
+                B.S.: Computer Science, Software Engineering Concentration<br>
+              </p>
+              <ul>
+                <li>Selected Coursework
+                  <ul>
+                    <li>Networks I & II</li>
+                    <li>Advanced Game Design (Team Lead)</li>
+                    <li>Software Engineering</li>
+                    <li>Software Craftsmanship</li>
+                    <li>Operating Systems & Concurrent Programming</li>
+                    <li>Intro to iOS Development</li>
+                    <li>Intro to Database Systems</li>
+                  </ul>
+                </li>
+                <li>Zeta Psi Fraternity
+                  <ul>
+                    <li>Executive Board Member (Sergeant at Arms)</li>
+                    <li>Web Chair</li>
+                    <li>Judicial Board Member</li>
+                    <li>Risk Manager</li>
+                    <li>Parliamentarian</li>
+                    <li>Meal Plan Manager</li>
+                  </ul>
+                </li>
+                <li>Emerging Leaders Program</li>
+              </ul>
+            </div>
+            <div class="col-sm-4 justify-content-sm-center text-center">
+              <img style="max-width: 100%; max-height: 150px;" src="../../assets/cwru.png" />
+            </div>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
   </div>
 
+  <h1 class="text-center">Skills</h1>
   <div class="pb-3">
     <!--
     WORD CLOUD STUFF
@@ -93,11 +206,11 @@
         </mat-card-content>
       </mat-card>
     </div> -->
-    <mat-card class="container">
-      <mat-card-title>Skills</mat-card-title>
-      <div class="row">
-        <div class="col-md-4">
-          <mat-card>
+    <!-- <mat-card class="row justify-content-sm-center"> -->
+      <!-- <mat-card-title>Skills</mat-card-title> -->
+      <div class="row justify-content-sm-center">
+        <div class="col-md-3 pb-3">
+          <mat-card style="height: 100%;">
             <mat-card-title>Advanced</mat-card-title>
             <mat-card-content>
                 <ul>
@@ -108,8 +221,8 @@
             </mat-card-content>
           </mat-card>
         </div>
-        <div class="col-md-4">
-          <mat-card>
+        <div class="col-md-3 pb-3">
+          <mat-card style="height: 100%;" class="pb-3">
             <mat-card-title>Intermediate</mat-card-title>
             <mat-card-content>
                 <ul>
@@ -120,8 +233,8 @@
             </mat-card-content>
           </mat-card>
         </div>
-        <div class="col-md-4">
-          <mat-card>
+        <div class="col-md-3 pb-3">
+          <mat-card style="height: 100%;">
             <mat-card-title>Beginner</mat-card-title>
             <mat-card-content>
               <ul>
@@ -133,15 +246,22 @@
           </mat-card>
         </div>
       </div>
-    </mat-card>
+    <!-- </mat-card> -->
   </div>
 
-  <div class="row pb-3">
-    <div class="col-sm-12">
+  <h1 class="text-center">Personal Life</h1>
+  <div class="row pb-3 justify-content-sm-center">
+    <div class="col-sm-9">
       <mat-card>
-        <mat-card-title> Personal Life </mat-card-title>
+        <!-- <mat-card-title> Personal Life </mat-card-title> -->
         <mat-card-content>
-          TODO
+          You will often catch me running, playing video games (lately League of Legends, Valorant, Minecraft), or hiking.
+          I also spend much of my free time writing and producing electronic music
+          <a href="https://open.spotify.com/artist/4T9V7Jpq56oUbkCCj9pBwD?si=x4pR5seuTb6WvAJhqzuipA">
+          (which you can listen to here)
+          </a>. I
+          love meeting people who are also interested in music production, bouncing ideas off
+          of each other, and working together to create a track that meshes both of our styles.
         </mat-card-content>
       </mat-card>
     </div>

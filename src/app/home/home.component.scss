@@ -2,6 +2,7 @@
   width: 150px;
   margin: 0 auto;
   border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .intro-header {
@@ -9,6 +10,8 @@
   background-image: url("../../assets/intro-bg.jpg");
   background-position: center;
   border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .intro-title {
@@ -20,4 +23,8 @@
 q {
   font-style: italic;
   quotes: "« " " »";
+}
+
+.contact-button {
+  height: 90px;
 }

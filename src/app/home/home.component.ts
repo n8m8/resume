@@ -198,6 +198,7 @@ export class HomeComponent implements OnInit {
     "SQL / Database Design",
     "C#",
     ".NET Core",
+    "Microservice Architecture",
     "Git / Version Control",
     "Angular",
     "Unity3D",
